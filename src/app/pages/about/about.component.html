@@ -1,0 +1,70 @@
+<mat-card class="mat-card ml-4">
+  <mat-card-header class="mat-card-header">Simple File Upload File </mat-card-header>
+  <mat-card-content class="mat-card-content">
+    <div class=" container">
+  
+        <!-- <form (submit)="onSubmit()">
+            <input type="file" name="image" (change)="onFileSelected($event)">
+            <button type="submit"  mat-raised-button color="primary" class="mat-raised-button">Upload</button>
+          </form> -->
+          <form >
+            <div>
+              <input type="file" (change)="onFileSelected($event)" />
+            </div>
+            <div>
+              <input type="text" [(ngModel)]="description" placeholder="Description" class="mat-raised-button" />
+            </div>
+            <div>
+              <button (click)="onSubmitWithDescription()"  mat-raised-button color="primary" class="mat-raised-button">Upload</button>
+            </div>
+
+          </form>
+
+          
+    </div> 
+    
+  </mat-card-content>
+</mat-card>
+
+<div id="image-container"></div>
+
+
+<mat-card class="mat-card">
+  <mat-card-header class="mat-card-header">Fetch Image from Database </mat-card-header>
+  <mat-card-content class="mat-card-content">
+    <img matListItemAvatar [src]="imageUrl" *ngIf="imageUrl">
+  </mat-card-content>
+  <mat-card-footer class="mat-card-footer">
+    <mat-icon color="primary">favorite</mat-icon>
+    <mat-icon color="primary">eye</mat-icon>
+    <mat-icon color="blue">thumb_up</mat-icon>
+  </mat-card-footer>
+</mat-card>
+
+<mat-card class="mat-card">
+  <mat-card-header class="mat-card-header">New Card </mat-card-header>
+  <mat-card-content c>
+    <span class="relative flex h-3 w-3">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+    </span>
+  </mat-card-content>
+   
+  <mat-card-footer class="mat-card-footer">
+    <mat-icon color="primary">favorite</mat-icon>
+    <mat-icon color="primary">eye</mat-icon>
+    <mat-icon color="blue">thumb_up</mat-icon>
+  </mat-card-footer>
+</mat-card>
+<mat-card class="mat-card">
+  <mat-card-header class="mat-card-header">New Card </mat-card-header>
+  <mat-card-content class="mat-card-content">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, quasi magnam. Aliquid cupiditate deleniti rerum iure minus similique ut! Eligendi, mollitia voluptatem excepturi obcaecati ea pariatur asperiores maxime adipisci fuga.
+
+  </mat-card-content>
+  <mat-card-footer class="mat-card-footer">
+    <mat-icon color="primary">favorite</mat-icon>
+    <mat-icon color="primary">eye</mat-icon>
+    <mat-icon color="blue">thumb_up</mat-icon>
+  </mat-card-footer>
+</mat-card>

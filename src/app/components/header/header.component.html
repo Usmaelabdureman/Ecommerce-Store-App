@@ -1,0 +1,116 @@
+<mat-toolbar class="mx-auto border-x  bg-blue-500">
+  <div class="flex  items-center  w-full">
+    <div class="flex w-full">
+      <a mat-button routerLink="/">LOGO</a>
+      <div class="hidden md:flex justify-between">
+        <a
+          mat-button
+          routerLink="/"
+          class="h-8 w-8 rounded-full hover:animate-ping hover:bg-red-800 hover:opacity-75"
+          >Home</a
+        >
+        <a
+          mat-button
+          routerLink="/about"
+          class="h-8 w-8 rounded-full hover:animate-ping hover:bg-red-800 hover:opacity-75"
+          >About</a
+        >
+        <a
+          mat-button
+          routerLink="/contact"
+          class="h-8 w-8 rounded-full hover:animate-ping hover:bg-red-800 hover:opacity-75"
+          >Contact</a
+        >
+        <a
+          mat-button
+          routerLink="/services"
+          class="h-8 w-8 rounded-full hover:animate-ping hover:bg-red-800 hover:opacity-75"
+          >Services</a
+        >
+      </div>
+    </div>
+
+    <div class="flex items-center">
+      <button
+        mat-icon-button
+        [matMenuTriggerFor]="menu"
+        class="hidden md:block mr-2"
+      >
+        <mat-icon [matBadge]="2" matBadgeColor="warn">shopping_cart</mat-icon>
+      </button>
+      <button mat-icon-button [matMenuTriggerFor]="setting" class="md:hidden">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <mat-menu #setting="matMenu">
+    <button mat-menu-item>
+      <mat-icon class="mr-2">account_circle</mat-icon>My Account
+    </button>
+    <button mat-menu-item>
+      <mat-icon class="mr-2">settings</mat-icon>Settings
+    </button>
+    <button mat-menu-item>
+      <mat-icon class="mr-2">logout</mat-icon>Logout
+    </button>
+  </mat-menu>
+  <mat-menu #menu="matMenu" class="space-x-20">
+    <div class="p-3 divide-y">
+      <div class="pb-3 flex justify-between">
+        <mat-icon class="mr-1">shopping_cart</mat-icon>Cart (2)
+        <a routerLink="cart">View</a>
+      </div>
+      <div class="py-3">
+        <div class="flex justify-between font-light mb-2">
+          number one
+          <span class="font-bold">{{ "150" | currency }} </span>
+        </div>
+        <div class="flex justify-between font-light mb-2">
+          number two
+          <span class="font-bold">{{ "150" | currency }} </span>
+        </div>
+        <div class="flex justify-between font-light mb-2">
+          number three
+          <span class="font-bold">{{ "150" | currency }} </span>
+        </div>
+        <div class="flex justify-between font-light mb-2">
+          number four
+          <span class="font-bold">{{ "150" | currency }} </span>
+        </div>
+      </div>
+      <div class="flex justify-between py-3 font-light">
+        Total:
+        <span class="font-bold">
+          {{ "600" | currency }}
+        </span>
+      </div>
+
+      <div class="pt-3 flex justify-between">
+        <button class="bg-rose-600 text-white rounded-full w-9 h-9">
+          <mat-icon>remove_shopping_cart</mat-icon>
+        </button>
+        <button class="bg-green-600 text-white rounded-full w-9 h-9">
+          <mat-icon>add_shopping_cart</mat-icon>
+        </button>
+      </div>
+    </div>
+  </mat-menu>
+
+  <div class="settings-menu" *ngIf="settingsMenuOpen">
+    <button mat-icon-button (click)="closeSettingsMenu()" class="md:hidden">
+      <mat-icon>close</mat-icon>
+    </button>
+    <div class="settings-menu-content">
+      <button mat-icon-button>
+        <mat-icon>account_circle</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon>settings</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon>logout</mat-icon>
+      </button>
+    </div>
+  </div>
+</mat-toolbar>

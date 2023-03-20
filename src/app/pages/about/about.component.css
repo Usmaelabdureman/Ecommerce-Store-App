@@ -1,0 +1,29 @@
+.mat-card{
+    background-color: whitesmoke;
+    margin-top: 2em;
+    margin-right: 50%;
+}
+.mat-card-header{
+    font-size: larger;
+    justify-content: center;
+    box-shadow: 0px 10px  5px lightblue;
+    padding-left: 3%;
+    color: white;
+    background-color: purple;
+
+}
+.mat-card-content{
+    margin-top: 10%;
+}
+.mat-raised-button{
+    margin-top: 5%;
+}
+.mat-card-footer{
+    display:flex;
+    justify-content: space-between;
+    /* background-color: purple; */
+    border-radius: 2cm ;
+    box-shadow: inset -1 2px;
+    margin-left: 10%;
+    padding: 4%;
+}

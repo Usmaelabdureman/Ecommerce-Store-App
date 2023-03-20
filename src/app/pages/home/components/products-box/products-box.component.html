@@ -1,0 +1,79 @@
+<!-- <mat-card [ngClass]="{'text-center': !fullWidthMode} ">
+    <div >
+        <img
+         class="mb-1 mx-auto h-[200px]"
+         [ngClass]="{'h-200px':!fullWidthMode,'h-[360px]':fullWidthMode}"
+         src="../../../../../assets/earphode-pro.jpg"
+        />
+        <div class="w-full ">
+            <div >
+                <h5>Earbuds
+                </h5>
+                <p class="truncate hover:whitespace-normal">earbuds pro</p>
+                <p>Description</p>
+            </div>
+            <div class="flex justify-between p-2"> 
+                <span class="text-red-600">{{'150' |currency}}</span>
+                <button> Add to Cart
+                    <mat-icon class="text-gray-900">shopping_cart</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+</mat-card> -->
+
+<!-- <mat-card class="relative text-white shadow-lg rounded-lg overflow-hidden text-center" :class="{'w-full': fullWidthMode}">
+    <div class="card-content">
+        <img class="object-cover object-center h-48 sm:h-72 md:h-80 lg:h-96 xl:h-[360px]" src="../../../../../assets/earphode-pro.jpg" />
+        <div class="absolute top-0 left-0 p-4">
+            <h5 class="font-bold uppercase tracking-widest">Earbuds</h5>
+            <p class="truncate hover:whitespace-normal text-sm">Earbuds Pro</p>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full flex justify-between items-center p-4">
+            <span class="text-3xl font-bold text-red-600">{{'150' | currency}}</span>
+            <button class="bg-red-600 hover:bg-red-700 rounded-full px-4 py-2">
+                <span class="mr-2">Add to Cart</span>
+                <mat-icon>shopping_cart</mat-icon>
+            </button>
+        </div>
+    </div>
+</mat-card>
+
+<style>
+.card-content {
+  transition: transform 0.2s ease-in-out;
+}
+
+.card-content:hover {
+  transform: scale(1.05);
+}
+</style> -->
+
+
+<mat-card class="relative text-white shadow-lg rounded-lg overflow-hidden text-center" :class="{'w-full': fullWidthMode}">
+    <div class="card-content">
+        <img class="object-cover object-center h-48 sm:h-72 md:h-80 lg:h-96 xl:h-[360px]" src="../../../../../assets/earphode-pro.jpg" />
+        <div class="absolute top-0 left-0 p-4  bg-opacity-80">
+            <h5 class="font-bold uppercase tracking-widest bg-red-600 px-2 rounded-md">Earbuds</h5>
+            <p class="truncate hover:whitespace-normal text-sm bg-gray-800 bg-opacity-80 px-2 rounded-md">Earbuds Pro</p>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full flex justify-between items-center p-4">
+            <span class="text-3xl font-bold text-red-600">{{'150' | currency}}</span>
+            <button class="bg-red-600 hover:bg-red-700 rounded-full px-4 py-2">
+                <span class="mr-2">Add to Cart</span>
+                <mat-icon>shopping_cart</mat-icon>
+            </button>
+        </div>
+    </div>
+</mat-card>
+
+<style>
+.card-content {
+  transition: transform 0.05s ease-in-out;
+}
+
+.card-content:hover {
+  transform: scale(1.05);
+}
+</style>
+

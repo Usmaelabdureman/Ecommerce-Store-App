@@ -1,0 +1,23 @@
+ <mat-drawer-container
+ [autosize]=""true
+ 
+ class="min-h-screen  max-w-7xl mx-auto border-x bg-slate-600"
+>
+<mat-drawer mode="side" [opened]="true" class="p-4 bg-slate-900">
+    <app-filters (showCategory)="onShowCategory($event)"></app-filters>
+</mat-drawer>
+<mat-drawer-content class="text-white p-6">
+    <app-products-header (columnsCountChange)="OnColumnsCountChange($event)"></app-products-header>
+    <mat-grid-list
+    gutterSize="16"
+    [cols]="cols"
+    [rowHeight]="rowHeight"
+    >
+    <mat-grid-tile>
+        <app-products-box class="w-full" [fullWidthMode]="cols===1"></app-products-box>
+    </mat-grid-tile>
+
+    </mat-grid-list>
+</mat-drawer-content>
+</mat-drawer-container>
+
