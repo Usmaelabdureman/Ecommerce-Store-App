@@ -27,6 +27,7 @@ import { ServicesComponent } from './components/services/services.component';
 import { ProductsHeaderComponent } from './pages/home/components/products-header/products-header.component';
 import { FiltersComponent } from './pages/home/components/filters/filters.component';
 import { ProductsBoxComponent } from './pages/home/components/products-box/products-box.component';
+import { CartComponent } from './pages/cart/cart.component';
 // import { Mat} from '@angular/material/expansion';
 // import { MatDrawerModule } from '@angular/material/drawer';
 // import { MatSidenavModule } from '@angular/material/sidenav';
@@ -42,7 +43,8 @@ import { ProductsBoxComponent } from './pages/home/components/products-box/produ
     ServicesComponent,
     ProductsHeaderComponent,
     FiltersComponent,
-    ProductsBoxComponent
+    ProductsBoxComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

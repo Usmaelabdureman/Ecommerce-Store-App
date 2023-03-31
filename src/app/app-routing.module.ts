@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'about', component: AboutComponent },
   { path: 'services', component: ServicesComponent },
+  { path: 'cart', component: ServicesComponent },
   { path: '**', redirectTo: '' }
 ];
 

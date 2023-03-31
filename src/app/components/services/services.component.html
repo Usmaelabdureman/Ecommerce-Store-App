@@ -1,1 +1,8 @@
-<p>services works!</p>
+<mat-card class="relative text-white shadow-lg rounded-lg overflow-hidden text-center">
+    <div class="card-content" *ngFor="let image of images">
+        <img class="object-cover object-center h-48 sm:h-72 md:h-80 lg:h-96 xl:h-[360px]" [src]="image.imageUrl" alt="{{image.description}}" />
+        <span class="absolute top-0 left-0 p-4  bg-opacity-80">
+<p>{{image.description}}</p>
+        </span>
+    </div>
+</mat-card> 
